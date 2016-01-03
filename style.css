@@ -1,0 +1,34 @@
+body {
+
+}
+.total, h1 {
+  text-align: center;
+}
+main {
+  display: flex;
+  margin: 1% 10% 1% 20%;
+}
+.apples {
+  width: 20%;
+  text-align: center;
+}
+.oranges {
+  width: 20%;
+  text-align: center;
+}
+.bananas {
+  width: 20%;
+  text-align: center;
+}
+.grapes {
+  width: 20%;
+	text-align: center;
+}
+img {
+  height: 140px;
+  width: 180px;
+}
+button {
+  display: block;
+  margin: 0 auto 0 auto;
+}

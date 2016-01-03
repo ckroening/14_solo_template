@@ -1,29 +1,22 @@
-/**
- * Employee representation.
- */
+/* Employee representation. */
 function Employee(num, firstName, lastName, salary, reviewScore) {
  	this.num = num;
  	this.firstName = firstName;
  	this.lastName = lastName;
  	this.salary = salary;
  	this.reviewScore = reviewScore;
- }
-/**
- * Employee list.
- */
+ };
+
+/* Employee list. */
 function EmployeeList() {
  	var list = [];
- 	/**
- 	 * Get a copy of the list
- 	 */
+
+ 	/* Get a copy of the list */
  	this.getList = function() {
  		return list.slice(0);
- 	}
- 	/**
- 	 * Add an Employee
- 	 *
- 	 * @param an employee
- 	 */
+ 	};
+
+ 	/* Add an Employee @param an employee */
  	this.addEmployee = function(employee) {
  		if(numExists(employee.num)) {
  			console.log('Unable to create employee, num is not unique.');
@@ -32,12 +25,9 @@ function EmployeeList() {
  		if(employee instanceof Employee) {
  			list.push(employee);
  		}
- 	}
- 	/**
- 	 * Remove an Employee
- 	 *
- 	 * @param employee number
- 	 */
+ 	};
+
+ 	/* Remove an Employee @param employee number */
  	 this.removeEmployee = function(num) {
  	 	for(i = 0; i < list.length; i++) {
  	 		if(num == list[i].num) {
@@ -45,19 +35,18 @@ function EmployeeList() {
  	 			break;
  	 		}
  	 	}	 	
- 	 }
- 	 /**
- 	  * Check if an employee number already exists
- 	  * 
- 	  * @param employee number
- 	  */
+ 	 };
+
+ 	 /* Check if an employee number already exists @param employee number */
  	  numExists = function(num) {
  	  	return list.some(function(element, index, array) {
  	  		return num == element.num;
  	  	});
  	  }
- }
+ };
+
  $(document).ready(function(){
+ 	
  	// create a list
  	var list = new EmployeeList();
 

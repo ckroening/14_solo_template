@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Handlebars Practice!</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
+	<script src="./scripts.js"></script>
+</head>
+<body>
+	<main>
+		<section>
+			<h1>Interesting People</h1>
+				<table class="people">
+					<script id="person-list" type="text/x-handlebars-template">
+						{{#each people}}
+					<tr>
+	    				 <td>{{number}}</td>
+	    				 <td>{{firstName}}</td>
+	    				 <td>{{lastName}}</td>
+	    				 <td>{{birthYear}}</td>
+	    				 <td>{{occupation}}</td>
+	    				 <td><button class="remove">Remove</button>
+	    			</tr>
+
+  						{{/#each}}
+  					</script>
+  				</table>
+  		</section>
+  	</main>
+</body>
+</html>
